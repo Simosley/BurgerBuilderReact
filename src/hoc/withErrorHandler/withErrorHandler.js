@@ -3,7 +3,6 @@ import React, {Component} from 'react'
 import Modal from '../../components/UI/Modal/Modal'
 
 import Auxaliry from '../Auxaliry/Auxaliry'
-import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder'
 
 const withErrorHandler = (WrappedComponent, axios) => {
     return class extends Component{
