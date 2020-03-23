@@ -48,7 +48,6 @@ export const auth = (email, password, isSignup) => {
       password: password,
       returnSecureToken: true
     };
-    console.log(isSignup);
 
     let url =
       "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCtlIxWxiVyxC6CJOlkzpBU-An12Of8TEw";
@@ -69,7 +68,6 @@ export const auth = (email, password, isSignup) => {
         dispatch(checkAuthTimeout(response.data.expiresIn));
       })
       .catch(error => {
-        console.log(error);
         dispatch(authFail(error.response.data.error));
       });
   };
